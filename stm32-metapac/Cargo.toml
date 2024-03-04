@@ -42,8 +42,8 @@ flavors = [
 ]
 
 [dependencies]
-cortex-m = "0.7.6"
-cortex-m-rt = { version = ">=0.6.15,<0.8", optional = true }
+cortex-m = { git = "https://github.com/rust-embedded/cortex-m", rev = "ec6b3ba49db60b23885921d238d3a9e86cf3e9e9"}
+cortex-m-rt = { git = "https://github.com/rust-embedded/cortex-m", rev = "ec6b3ba49db60b23885921d238d3a9e86cf3e9e9", optional = true }
 
 [features]
 default = ["pac"]
