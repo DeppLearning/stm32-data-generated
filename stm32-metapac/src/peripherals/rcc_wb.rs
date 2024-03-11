@@ -1806,7 +1806,7 @@ pub mod regs {
         #[doc = "RTC clock source selection"]
         #[inline(always)]
         pub const fn rtcsel(&self) -> super::vals::Rtcsel {
-            let val = (self.0 >> 8usize) & 0x03;
+            let val = 0x00;
             super::vals::Rtcsel::from_bits(val as u8)
         }
         #[doc = "RTC clock source selection"]
@@ -1818,7 +1818,7 @@ pub mod regs {
         #[inline(always)]
         pub const fn rtcen(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
-            val != 0
+            false
         }
         #[doc = "RTC clock enable"]
         #[inline(always)]
@@ -3144,7 +3144,7 @@ pub mod regs {
         #[inline(always)]
         pub const fn lsi1rdyc(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
-            val != 0
+            false
         }
         #[doc = "LSI1 ready interrupt clear"]
         #[inline(always)]
