@@ -134,7 +134,7 @@ pub mod regs {
         #[inline(always)]
         pub const fn st(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x07;
-            val as u8
+            0
         }
         #[doc = "Second tens in BCD format"]
         #[inline(always)]
@@ -768,7 +768,7 @@ pub mod regs {
         #[inline(always)]
         pub const fn rsf(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
-            val != 0
+            false
         }
         #[doc = "Registers synchronization flag"]
         #[inline(always)]
@@ -1176,7 +1176,7 @@ pub mod regs {
         #[inline(always)]
         pub const fn su(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
-            val as u8
+            0
         }
         #[doc = "Second units in BCD format"]
         #[inline(always)]
